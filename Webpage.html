@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motorcycle Themed Website</title>
+<style>
+   
+   /* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #2c6b2f;
+  color: #dff04a;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(145deg, #2c6b2f, #0f0f0f);
+  border-radius: 15px;
+  box-shadow: 0 0 20px #ff3b3b55;
+  border: 2px solid #ff3b3b;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #ff3b3b;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.1rem;
+}
+
+/* Navigation */
+nav {
+  background: #2c6b2f;
+  padding: 15px 0;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #ff3b3b55;
+  margin-bottom: 30px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #eee;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background: #ff3b3b;
+  color: #0d0d0d;
+}
+
+/* Sections */
+section {
+  background: #1a1a1a;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 30px;
+  border: 1px solid #333;
+  box-shadow: 0 0 10px rgba(255, 59, 59, 0.3);
+}
+
+section h2 {
+  color: #ff3b3b;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+section p {
+  font-size: 1rem;
+}
+
+/* Images & Videos */
+img, video {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  border: 2px solid #ff3b3b;
+  box-shadow: 0 0 10px rgba(255,59,59,0.5);
+}
+
+/* 3D Cube */
+.cube-container {
+  width: 250px;
+  height: 250px;
+  margin: 40px auto;
+  perspective: 1000px;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 12s infinite linear;
+}
+
+.cube div {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border-radius: 12px;
+}
+
+.cube div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #ff3b3b;
+  box-shadow: 0 0 12px rgba(255, 59, 59, 0.6);
+}
+
+.front  { transform: rotateY(0deg) translateZ(125px); }
+.back   { transform: rotateY(180deg) translateZ(125px); }
+.right  { transform: rotateY(90deg) translateZ(125px); }
+.left   { transform: rotateY(-90deg) translateZ(125px); }
+.top    { transform: rotateX(90deg) translateZ(125px); }
+.bottom { transform: rotateX(-90deg) translateZ(125px); }
+
+@keyframes spin {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to   { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  color: #ff3b3b;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  padding: 12px;
+  background: #111;
+  color: #eee;
+  border: 1px solid #444;
+  border-radius: 8px;
+}
+
+form button {
+  background: #ff3b3b;
+  color: #111;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #e60000;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1a1a1a;
+  border-top: 2px solid #ff3b3b;
+  border-radius: 10px;
+  margin-top: 40px;
+  color: #ff3b3b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cube-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  .cube div {
+    width: 180px;
+    height: 180px;
+  }
+
+  .cube div img {
+    border: 2px solid #ff3b3b;
+  }
+
+  .front, .back, .left, .right, .top, .bottom {
+    transform: none !important;
+    position: static !important;
+  }
+
+  .cube {
+    animation: none;
+    display: grid;
+    gap: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+<header>
+<h1>🏍️ Welcome to My Motorcycle World 🏍️</h1>
+<p>Kyle Angelo G. Sigaya</p>
+<p> MOTORCYCLE PAGE</p>
+</header>
+ 
+  <nav>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#image">Image</a></li>
+<li><a href="#video">Video</a></li>
+<li><a href="#showcase">3D Cube</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+ 
+  <main>
+<section id="about">
+<h2>About This Website</h2>
+<p>This site demonstrates how HTML5 and CSS3 can be used to build a **motorcycle-themed** interactive webpage with 3D effects.</p>
+</section>
+
+<section id="image">
+  <h2>Motorcycle Image</h2>
+  <div style="position: relative; display: inline-block;">
+    <img src="https://powersports.honda.com/motorcycle/touring/-/media/products/family/gold-wing-tour/family-gallery/expanded/2025/2025-gold-wing-tour-gallery-01.jpg" alt="Background" style="width: 100%; border-radius: 12px;">
+  </div>
+</section>
+
+ 
+    <section id="video">
+<h2>Motorcycle Video</h2>
+<video controls>
+<source src="https://www.pexels.com/download/video/3055287/" type="video/mp4">
+        Your browser does not support the video tag.
+</video>
+</section>
+ 
+    <!-- Motorcycle 3D Cube -->
+<section id="showcase">
+<h2>3D Motorcycle Showcase</h2>
+<p>This spinning cube displays motorcycle images on each side.</p>
+<div class="cube-container">
+<div class="cube">
+<div class="front"><img src="https://images.pexels.com/photos/1715193/pexels-photo-1715193.jpeg"></div>
+<div class="back"><img src="https://images.pexels.com/photos/1715193/pexels-photo-1715193.jpeg"></div>
+<div class="right"><img src="https://images.pexels.com/photos/1715193/pexels-photo-1715193.jpeg"></div>
+<div class="left"><img src="https://images.pexels.com/photos/1715193/pexels-photo-1715193.jpeg"></div>
+<div class="top"><img src="https://images.pexels.com/photos/1715193/pexels-photo-1715193.jpeg"></div>
+<div class="bottom"><img src="https://images.pexels.com/photos/1715193/pexels-photo-1715193.jpeg"></div>
+</div>
+</div>
+</section>s
+ 
+    <section id="contact">
+<h2>Contact Me</h2>
+<form>
+<label for="name">Full Name:</label>
+<input type="text" id="name" placeholder="Enter your name">
+ 
+        <label for="email">Email:</label>
+<input type="email" id="email" placeholder="Enter your email">
+ 
+        <label for="message">Message:</label>
+<textarea id="message" rows="5" placeholder="Write your message here"></textarea>
+ 
+        <button type="submit">Send Message</button>
+</form>
+</section>
+</main>
+ 
+  <footer>
+<p>&copy; 2025 Motorcycle Themed Website | Ride Safe Everyone! 🏍️</p>
+</footer>
+</body>
+</html>
