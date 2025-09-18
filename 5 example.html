@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Interaction Playground</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    section {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Interaction Playground</h1>
+
+
+  <section>
+    <h2>1. Button Click → Show Alert</h2>
+    <button onclick="sayHello()">Click Me</button>
+  </section>
+
+
+  <section>
+    <h2>2. Button Click → Change Text</h2>
+    <p id="message">This is the original text.</p>
+    <button onclick="changeText()">Change Text</button>
+  </section>
+
+
+  <section>
+    <h2>3. Input Field → Show User Input</h2>
+    <input type="text" id="userInput" placeholder="Type something...">
+    <button onclick="showInput()">Submit</button>
+    <p id="output"></p>
+  </section>
+
+  <section>
+    <h2>4. Hover Over Button → Change Color</h2>
+    <button id="hoverBtn">Hover Over Me</button>
+  </section>
+
+
+  <section>
+    <h2>5. Counter (Increment / Decrement)</h2>
+    <p id="counter">0</p>
+    <button onclick="increase()">+</button>
+    <button onclick="decrease()">-</button>
+  </section>
+
+  <script>
+    
+    function sayHello() {
+      alert("Hello! You clicked the button.");
+    }
+
+
+    function changeText() {
+      document.getElementById("message").innerText = "The text has been changed!";
+    }
+
+  
+    function showInput() {
+      let text = document.getElementById("userInput").value;
+      document.getElementById("output").innerText = "You typed: " + text;
+    }
+
+   
+    let btn = document.getElementById("hoverBtn");
+    btn.onmouseover = function() {
+      btn.style.backgroundColor = "lightblue";
+    }
+    btn.onmouseout = function() {
+      btn.style.backgroundColor = "";
+    }
+
+    
+    let count = 0;
+    function increase() {
+      count++;
+      document.getElementById("counter").innerText = count;
+    }
+    function decrease() {
+      count--;
+      document.getElementById("counter").innerText = count;
+    }
+  </script>
+</body>
+</html>
