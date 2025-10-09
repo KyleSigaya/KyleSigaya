@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - PRELIM EXAM</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+    .navbar {
+      background: #2c3e50;
+      width: 220px;
+      min-height: 100vh;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 40px;
+      z-index: 10;
+    }
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+    .navbar li {
+      width: 100%;
+    }
+    .navbar a {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 18px;
+      padding: 16px 32px;
+      display: block;
+      transition: background 0.2s, color 0.2s;
+      border-radius: 0 25px 25px 0;
+    }
+    .navbar a:hover {
+      background: #34495e;
+      color: #f39c12;
+    }
+    .main-content {
+      margin-left: 240px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .about-section {
+      background: #fff;
+      padding: 48px 36px;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+      max-width: 600px;
+      text-align: center;
+    }
+    .about-section h2 {
+      color: #2c3e50;
+      margin-bottom: 24px;
+      font-size: 2.2em;
+      font-weight: bold;
+    }
+    .about-section p.quote {
+      font-size: 1.4em;
+      font-style: italic;
+      color: #2980b9;
+      margin-bottom: 32px;
+      letter-spacing: 1px;
+    }
+    .about-section p.thank {
+      font-size: 1.1em;
+      color: #34495e;
+      margin-top: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <section class="about-section">
+      <h2>About Us</h2>
+      <p class="quote">WE MAKE PEOPLE THINK WHAT THEY THINK</p>
+      <p class="thank">Thank you for visiting our page.<br>We hope you leave with something to think about.</p>
+    </section>
+  </div>
+</body>
+</html>

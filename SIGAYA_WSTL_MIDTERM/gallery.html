@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery - PRELIM EXAM</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(120deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+    .navbar {
+      background: #2c3e50;
+      width: 100%;
+      min-height: unset;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 0 0 0;
+      z-index: 10;
+      height: 60px;
+    }
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: center;
+      height: 60px;
+    }
+    .navbar li {
+      width: unset;
+      margin-right: 32px;
+    }
+    .navbar a {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 18px;
+      padding: 16px 0;
+      display: block;
+      transition: color 0.2s;
+      border-radius: 0;
+    }
+    .navbar a:hover {
+      color: #f39c12;
+      border-bottom: 2px solid #f39c12;
+      background: none;
+    }
+    .main-content {
+      margin-left: 0;
+      margin-top: 80px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 80px);
+    }
+    .gallery-section {
+      background: #fff;
+      padding: 48px 36px;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+    }
+    .gallery-title {
+      font-size: 2.2em;
+      color: #2c3e50;
+      margin-bottom: 32px;
+      font-weight: bold;
+    }
+    .museum-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+    }
+    .museum-item {
+      background: #f5f7fa;
+      border: 6px solid #d1d8e0;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(44,62,80,0.08);
+      padding: 18px;
+      width: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s;
+    }
+    .museum-item:hover {
+      box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+    }
+    .museum-item img {
+      width: 220px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      border: 2px solid #b2bec3;
+    }
+    .museum-caption {
+      font-size: 1em;
+      color: #636e72;
+      margin-top: 8px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <section class="gallery-section">
+      <div class="gallery-title">Museum Gallery</div>
+      <div class="museum-gallery">
+        <div class="museum-item">
+          <img src="https://images.pexels.com/photos/18323294/pexels-photo-18323294.jpeg" alt="Person in red hoodie at laundromat">
+          <div class="museum-caption">Red Hoodie at the Laundromat</div>
+        </div>
+        <div class="museum-item">
+          <img src="https://images.pexels.com/photos/28873160/pexels-photo-28873160.jpeg" alt="Playboy sign and silhouettes">
+          <div class="museum-caption">Playboy Sign and Silhouettes</div>
+        </div>
+        <div class="museum-item">
+          <img src="https://images.pexels.com/photos/17078219/pexels-photo-17078219.jpeg" alt="Person on beach with tattoo">
+          <div class="museum-caption">Beach Scene with Tattoo</div>
+        </div>
+        <div class="museum-item">
+          <img src="https://images.pexels.com/photos/889709/pexels-photo-889709.jpeg" alt="Rifle and tactical gear">
+          <div class="museum-caption">Rifle and Tactical Gear</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
