@@ -1,0 +1,91 @@
+/* Modern café theme - light */
+:root{
+  --brown:#6b3e26;
+  --dark:#4a2c1c;
+  --latte:#f7efe7;
+  --muted:#86726a;
+  --white:#ffffff;
+  --card-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  --radius:12px;
+  --max-width:1200px;
+  --accent:#8b4a2b;
+}
+
+/* Reset */
+*{box-sizing:border-box}
+body{font-family:Inter, 'Poppins', Arial, sans-serif;background:var(--latte);color:var(--dark);margin:0;line-height:1.5}
+a{color:var(--dark);text-decoration:none}
+
+/* NAV */
+.site-nav{background:var(--white);border-bottom:1px solid rgba(0,0,0,0.04)}
+.nav-inner{max-width:var(--max-width);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:18px}
+.brand{font-weight:700;color:var(--brown);font-size:20px}
+.nav-links a{margin-left:18px;color:var(--dark)}
+.nav-links .btn{background:var(--brown);color:white;padding:8px 12px;border-radius:8px}
+.nav-links .btn.alt{background:transparent;border:1px solid var(--brown);color:var(--brown)}
+
+/* Hero */
+.hero{background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1400');background-size:cover;background-position:center;padding:100px 0;color:white}
+.hero .container{max-width:var(--max-width);margin:0 auto;padding:0 20px;display:flex;align-items:center}
+.hero h1{font-size:42px;margin:0 0 12px;color:#fff;text-shadow:0 6px 18px rgba(0,0,0,0.4)}
+.hero p{max-width:620px;color:rgba(255,255,255,0.9);margin:0 0 18px}
+.hero .cta{background:var(--accent);color:white;padding:12px 18px;border-radius:10px;border:none}
+
+/* Sections */
+.section{max-width:var(--max-width);margin:60px auto;padding:0 20px}
+.section-title{text-align:center;font-weight:700;color:var(--brown);margin-bottom:28px}
+
+/* Menu grid/cards */
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--card-shadow);display:flex;flex-direction:column}
+.card img{width:100%;height:180px;object-fit:cover}
+.card-body{padding:16px;flex:1;display:flex;flex-direction:column}
+.card h3{margin:0 0 8px;color:var(--dark)}
+.card p{flex:1;color:var(--muted);margin:0 0 12px}
+.card .meta{display:flex;align-items:center;justify-content:space-between}
+.price{font-weight:700;color:var(--brown)}
+.add-btn{background:var(--brown);color:white;padding:8px 12px;border-radius:8px;border:none}
+
+/* Forms */
+.form-card{background:var(--white);padding:20px;border-radius:12px;box-shadow:var(--card-shadow)}
+input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.08);margin:8px 0}
+
+/* Footer */
+.footer{margin-top:60px;background:#111;color:#fff;padding:28px;text-align:center}
+
+/* Responsive tweaks */
+@media (max-width:700px){
+  .hero{padding:48px 0}
+  .hero h1{font-size:28px}
+  .nav-inner{padding:12px}
+}
+
+.success-msg {
+    color: green;
+    background: #e0ffe0;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.error-msg {
+    color: red;
+    background: #ffe0e0;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.social-login {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.social-login .icons img {
+    width: 32px;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
